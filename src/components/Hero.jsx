@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+// 1. Sabse pehle image ko import karein
+import shivProfile from '../assets/shiv.jpeg'; 
 
 const Hero = () => {
   return (
@@ -62,7 +64,7 @@ const Hero = () => {
           {/* Main Profile Image */}
           <div className="bg-gray-300 aspect-[4/5] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-gray-100">
             <img 
-              src="/src/assets/shiv.jpeg" // Bhai yahan apni photo lagana
+              src={shivProfile} // 2. Yahan variable use kiya hai jo Vercel build mein kaam karega
               alt="Shivansh Dwivedi" 
               className="w-full h-full object-cover"
             />
@@ -71,7 +73,7 @@ const Hero = () => {
           {/* "Hi, I'm Shivansh" Text */}
           <div className="mt-6 relative">
             <p className="handwritten text-black text-3xl md:text-4xl">Hi, I'm Shivansh</p>
-            {/* Decorative arrow icon similar to screenshot */}
+            {/* Decorative arrow icon */}
             <div className="absolute -top-12 -right-8 text-orange-500 transform rotate-12">
                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                  <path d="M7 7l10 10M17 7l-10 10" />
